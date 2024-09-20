@@ -62,7 +62,8 @@ fmu-news/
 ![Login](assets/imagens/readme/login.png)
 
 ## Acesse Nosso Projeto
-[![My Skills](https://skillicons.dev/icons?i=figma)](https://www.figma.com/design/5CflBYbkceLWuCDT8vWlgp/Design-de-Interface-Web?node-id=1-3&node-type=frame&t=qD52a5vwpm7f4nf0-0)
+[![My Skills](https://skillicons.dev/icons?i=figma)](https://www.figma.com/design/5CflBYbkceLWuCDT8vWlgp/Design-de-Interface-Web?node-id=1-3&node-type=frame&t=qD52a5vwpm7f4nf0-0) [![My Skills](https://skillicons.dev/icons?i=vercel)](https://fmu-news.vercel.app/login.html)
+
 
 ## Instruções de Instalação
 **Clone o repositório:**
