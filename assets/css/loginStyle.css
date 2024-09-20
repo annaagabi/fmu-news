@@ -1,0 +1,71 @@
+:root{
+    --main-color: #C81D25;
+    --second-color: #0B3954;
+    --third-color: #FFFFFF;
+    --fourth-color:#000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+.fonte-20{
+    font-size: 20px;
+}
+
+.fonte-16{
+    font-size: 16px;
+}
+
+.texto-azul{
+    color: var(--second-color)
+}
+
+.texto-branco{
+    color: var(--third-color);
+}
+
+.borda-vermelha{
+    border: solid var(--main-color);
+}
+
+.borda-raio{
+    border-radius: 10px;
+}
+
+.borda-card{
+    width: 499px;
+}
+
+.borda-input{
+    width: 355px;
+    height: 69px;
+    border: solid var(--second-color);
+}
+
+.botao-login{
+    width: 144px;
+    height: 56px;
+}
+
+.botao-cadastro{
+    width: 178px;
+    height: 56px;
+}
+.botao-estilo{
+    background-color: var(--main-color);
+    color: var(--third-color);
+    font-size: 24px;
+}
+
+.fundo-vermelho{
+    background-color: var(--main-color);
+}
+
+footer{
+    height: 159px;
+}
