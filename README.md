@@ -84,4 +84,4 @@ Use o código com cuidado.
 - [@annaagabi](https://www.github.com/annaagabi)
 - [@charlesjrr](https://www.github.com/charlesjrr)
 - [@GakPss](https://www.github.com/GakPss)
-- [@](https://www.github.com/)
+- [@Gabizinhadias010](https://www.github.com/Gabizinhadias010)
