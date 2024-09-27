@@ -16,7 +16,7 @@
     </header>
     <main class="mt-5 mb-5 d-flex flex-column justify-content-center align-items-center">
         <form class="card-login d-flex flex-column justify-content-center align-items-center border-3
-        borda-vermelha borda-raio borda-card" method="post" action="#">
+        borda-vermelha borda-raio borda-card" method="post" action="" onsubmit="event.preventDefault(); Enviar();"> <!-- o "onsubmit="event.preventDefault(); Enviar();"" não deixa redirecionar -->
             <h2 class="fs-1 texto-azul fw-bold mt-5 pb-4">LOGIN</h2>
             <div class="card-login d-flex flex-column">
                 <label for="email" class="form-label fw-bold pb-4 fonte-20">Email</label>
