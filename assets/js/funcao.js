@@ -8,6 +8,8 @@ function Enviar() {
 
 }
 
+// Modal
+
 const openModalButton = document.querySelector("#open-modal")
 const modal = document.querySelector("#modal")
 
@@ -25,4 +27,14 @@ openModalButton.addEventListener("click", () => {
     }, 5000); 
   });
   
+// Redimensionar Textarea
+
+
+const textarea = document.getElementById('area-redimensionar');
+
+textarea.addEventListener('input', function() {
+  this.style.height = 'auto';
+  this.style.height = (this.scrollHeight)   
+ + 'px';
+});
   
