@@ -15,6 +15,9 @@
     border: none;
     font-family: "Roboto", sans-serif;
 }
+.fonte-32{
+    font-size: 32px;
+}
 
 .fonte-20{
     font-size: 20px;
@@ -33,6 +36,14 @@
 }
 .texto-preto{
     color: var(--fourth-color)
+}
+
+.fundo-vermelho{
+    background-color: var(--main-color);
+}
+
+.fundo-azul{
+    background-color: var(--second-color);
 }
 
 .borda-vermelha{
@@ -68,7 +79,11 @@
     font-size: 24px;
 }
 
-.modal-fazendo{
+.gap-main{
+    gap:80px
+}
+
+.modal-container{
     left: 40%;
     top: 0;
     border: 2px solid var(--main-color);
@@ -98,10 +113,45 @@
     padding-top: 15px;
 }
 
-footer{
-    height: 159px;
+.inserir-noticia{
+    max-width: 1001px;
+    width: 90%;
+    min-height: 716px;
+    margin-top: 105px;
+    /* border-radius: 20px; */
+    gap:57px;
 }
 
-.fundo-vermelho{
-    background-color: var(--main-color);
+.titulo-noticia input{
+    /* max-width: 839px;
+    width: 90%; */
+    width: 839px;
+    height: 92px;
+    outline: none;
+}
+
+.conteudo-noticia textarea::placeholder{
+    color: var(--fourth-color);
+}
+
+.titulo-noticia input::placeholder{
+    color: var(--fourth-color);
+    font-size: 32px;
+}
+
+.conteudo-noticia textarea{
+    /* max-width: 839px;
+    width: 90%; */
+    width: 839px;
+    min-height: 453px;
+    resize: none;
+    outline: none;
+}
+
+.botoes{
+    gap:78px;
+}
+
+footer{
+    height: 159px;
 }
