@@ -1,20 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import 'global.css';
 
-:root{
-    --main-color: #C81D25;
-    --second-color: #0B3954;
-    --third-color: #FFFFFF;
-    --fourth-color:#000000;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    font-family: "Roboto", sans-serif;
-}
 .fonte-32{
     font-size: 32px;
 }
