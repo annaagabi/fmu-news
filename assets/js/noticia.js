@@ -1,85 +1,120 @@
-document.getElementById('nova-noticia').addEventListener('submit', saveNoticia);
+// // Seleção de Elementos
+const novaNoticia = document.querySelector("#nova-noticia")
+const noticiaTitulo = document.querySelector("#noticia-titulo")
+const noticiaDescricao = document.querySelector("#noticia-descricao")
+// const cardsNoticia = document.querySelector("#cards-noticia")
+const editeNoticia = document.querySelector("#edite-noticia")
+const cancelEditBtn = document.querySelector("#cancelar-edicao-noticia")
 
-// Salvar nova notícia
-function saveNoticia(e) {
-  e.preventDefault();
+// // Seleção de Elementos
+// const cardsNoticia = document.querySelector("#cards-noticia");
 
-  let titulo = document.getElementById('titulo').value;
-  let descricao = document.getElementById('descricao').value;
+// // Verifica se existem dados no localStorage
+// const titulo = localStorage.getItem("tituloNoticia");
+// const descricao = localStorage.getItem("descricaoNoticia");
 
-  let noticia = {
-    titulo,
-    descricao
-  };
+// if (titulo && descricao) {
+//     // Cria a estrutura da notícia
+//     const noticia = document.createElement("div");
+//     noticia.classList.add("card-noticia", "d-flex", "align-items-center", "justify-content-center", "gap-3", "mt-5");
 
-  // Checar se existe alguma notícia no localStorage
-  if (localStorage.getItem('noticias') === null) {
-    let noticias = [];
-    noticias.push(noticia);
-    localStorage.setItem('noticias', JSON.stringify(noticias));
-  } else {
-    let noticias = JSON.parse(localStorage.getItem('noticias'));
-    noticias.push(noticia);
-    localStorage.setItem('noticias', JSON.stringify(noticias));
-  }
+//     const tituloDiv = document.createElement("div");
+//     tituloDiv.classList.add("titulo", "d-flex", "align-items-center", "justify-content-center", "rounded-4", "fundo-azul", "h4-largura");
 
-  // Resetar o formulário
-  document.getElementById('nova-noticia').reset();
+//     const tituloElem = document.createElement("h4");
+//     tituloElem.classList.add("texto-branco", "fw-bold", "fonte-24");
+//     tituloElem.innerText = titulo;
+//     tituloDiv.appendChild(tituloElem);
 
-  // Mostrar modal de confirmação
-  mostrarModalSucesso();
+//     // Adiciona a div do título à div principal da notícia
+//     noticia.appendChild(tituloDiv);
 
-  // Atualizar as notícias na página "todasNoticias", se aplicável
-  if (document.querySelector('.cards-noticia')) {
-    getNoticias();
-  }
+//     const funcoesDiv = document.createElement("div");
+//     funcoesDiv.classList.add("funcoes", "d-flex", "gap-1");
+
+//     const editaBtn = document.createElement("a");
+//     editaBtn.href = "#editarNoticia.html";
+//     editaBtn.classList.add("edita-btn");
+//     editaBtn.innerHTML = '<img src="./assets/imagens/editar.svg" alt="Icone de edição representado por um lápis e um papel na cor vermelha">';
+//     funcoesDiv.appendChild(editaBtn);
+
+//     const deletaBtn = document.createElement("a");
+//     deletaBtn.classList.add("deleta-btn");
+//     deletaBtn.innerHTML = '<img src="./assets/imagens/lixeira.svg" alt="Icone de deletar representado por uma lixeira na cor vermelha">';
+//     funcoesDiv.appendChild(deletaBtn);
+
+//     // Adiciona a div de funções à div principal da notícia
+//     noticia.appendChild(funcoesDiv);
+
+//     // Adiciona a notícia ao contêiner principal
+//     cardsNoticia.appendChild(noticia);
+
+//     // Limpa os dados do localStorage após exibir
+//     localStorage.removeItem("tituloNoticia");
+//     localStorage.removeItem("descricaoNoticia");
+// }
+
+// Seleção de Elementos
+const cardsNoticia = document.querySelector("#cards-noticia");
+
+// Função para carregar e exibir as notícias
+function carregarNoticias() {
+    // Verifica se existem dados no localStorage
+    const noticias = JSON.parse(localStorage.getItem("noticias")) || [];
+
+    // Limpar o conteúdo anterior
+    cardsNoticia.innerHTML = "";
+
+    // Iterar pelas notícias e criar os elementos
+    noticias.forEach(noticia => {
+        // Cria a estrutura da notícia
+        const noticiaDiv = document.createElement("div");
+        noticiaDiv.classList.add("card-noticia", "d-flex", "align-items-center", "justify-content-center", "gap-3", "mt-5");
+
+        const tituloDiv = document.createElement("div");
+        tituloDiv.classList.add("titulo", "d-flex", "align-items-center", "justify-content-center", "rounded-4", "fundo-azul", "h4-largura");
+
+        const tituloElem = document.createElement("h4");
+        tituloElem.classList.add("texto-branco", "fw-bold", "fonte-24");
+        tituloElem.innerText = noticia.titulo;
+        tituloDiv.appendChild(tituloElem);
+
+        // Adiciona a div do título à div principal da notícia
+        noticiaDiv.appendChild(tituloDiv);
+
+        const funcoesDiv = document.createElement("div");
+        funcoesDiv.classList.add("funcoes", "d-flex", "gap-1");
+
+        const editaBtn = document.createElement("a");
+        editaBtn.href = "#editarNoticia.html";
+        editaBtn.classList.add("edita-btn");
+        editaBtn.innerHTML = '<img src="./assets/imagens/editar.svg" alt="Icone de edição representado por um lápis e um papel na cor vermelha">';
+        funcoesDiv.appendChild(editaBtn);
+
+        const deletaBtn = document.createElement("a");
+        deletaBtn.classList.add("deleta-btn");
+        deletaBtn.innerHTML = '<img src="./assets/imagens/lixeira.svg" alt="Icone de deletar representado por uma lixeira na cor vermelha">';
+        deletaBtn.addEventListener('click', () => deleteNoticia(noticia.titulo));
+        funcoesDiv.appendChild(deletaBtn);
+
+        // Adiciona a div de funções à div principal da notícia
+        noticiaDiv.appendChild(funcoesDiv);
+
+        // Adiciona a notícia ao contêiner principal
+        cardsNoticia.appendChild(noticiaDiv);
+    });
 }
 
-// Função para mostrar o modal de sucesso
-function mostrarModalSucesso() {
-  const modal = document.getElementById('modal');
-  modal.classList.remove('hide-modal');
-  setTimeout(() => {
-    modal.classList.add('hide-modal');
-  }, 2000);
-}
-
-// Deletar notícia
+// Função para deletar uma notícia
 function deleteNoticia(titulo) {
-  let noticias = JSON.parse(localStorage.getItem('noticias'));
-  noticias = noticias.filter(noticia => noticia.titulo !== titulo);
-  localStorage.setItem('noticias', JSON.stringify(noticias));
-  getNoticias();
+    let noticias = JSON.parse(localStorage.getItem('noticias'));
+    noticias = noticias.filter(noticia => noticia.titulo !== titulo);
+    localStorage.setItem('noticias', JSON.stringify(noticias));
+    carregarNoticias();
 }
 
-// Exibir notícias na página "todasNoticias"
-function getNoticias() {
-  let noticias = JSON.parse(localStorage.getItem('noticias')) || [];
-  let noticiasView = document.querySelector('.cards-noticia');
-  if (noticiasView) {
-    noticiasView.innerHTML = '';
+// Chamar a função para carregar as notícias quando a página carregar
+window.onload = carregarNoticias;
 
-    for (let i = 0; i < noticias.length; i++) {
-      let titulo = noticias[i].titulo;
-      let descricao = noticias[i].descricao;
 
-      noticiasView.innerHTML += `
-        <div class="card-noticia d-flex align-items-center justify-content-center gap-3">
-          <div class="titulo d-flex align-items-center justify-content-center rounded-4 fundo-azul h4-largura">
-            <h4 class="texto-branco fw-bold fonte-24">${titulo}</h4>
-          </div>
-          <div class="funcoes d-flex gap-1">
-            <a href="#editarNoticia.html"><img src="./assets/imagens/editar.svg" alt="Ícone de edição"></a>
-            <a href="#" onclick="deleteNoticia('${titulo}')"><img src="./assets/imagens/lixeira.svg" alt="Ícone de deletar"></a>
-          </div>
-        </div>`;
-    }
-  }
-}
 
-// Chamar as funções para carregar as notícias quando a página carregar
-window.onload = function() {
-  if (document.querySelector('.cards-noticia')) {
-    getNoticias();
-  }
-};
