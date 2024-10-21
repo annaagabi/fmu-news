@@ -67,8 +67,6 @@ function exibirNoticias() {
         cardsNoticias.appendChild(cardNoticia);
     });
 }
-  
-
 
 // Redimensionar Textarea
 const textarea = document.getElementById('noticia-descricao');
