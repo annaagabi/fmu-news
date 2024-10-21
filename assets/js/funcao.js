@@ -43,7 +43,7 @@ openModalButton.addEventListener("click", () => {
         // Fecha o modal após 5 segundos e redireciona para "todasNoticias.html"
         setTimeout(() => {
             toggleModal();
-            window.location.href = "todasNoticias.html";
+            window.location.href = "todas-noticias.html";
         }, 5000); 
     }
 });
