@@ -102,6 +102,8 @@ function carregarNoticias() {
             window.location.href = 'noticia.html';
         });
 
+        noticiaDiv.appendChild(funcoesDiv);
+
         // Adiciona a notícia ao contêiner principal
         cardsNoticia.appendChild(noticiaDiv);
     });
