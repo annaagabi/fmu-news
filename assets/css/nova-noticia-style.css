@@ -133,6 +133,15 @@
     outline: none;
 }
 
+.span-erro{
+    color: var(--main-color);
+    font-size: 1rem;
+}
+
+.span-exibir{
+    opacity: 1;
+}
+
 .botoes{
     gap:78px;
 }
