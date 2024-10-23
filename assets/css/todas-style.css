@@ -72,6 +72,37 @@ html, body {
     flex:1
 }
 
+/* MODAL */
+.modal-container{
+    top: 0;
+    border: 2px solid var(--main-color);
+    width: 24.6rem;
+    height: 5.75rem;
+    max-width: 90%;
+    opacity: 1;
+    pointer-events: all; 
+    border-radius: 0px 0px 10px 10px;
+    background-color: var(--third-color);
+
+}
+
+.hide-modal{
+     opacity: 0; 
+    pointer-events: none; 
+}
+
+.modal-texto{
+    gap: 16px;
+}
+.modal-texto img{
+    width: 30px;
+    height: 30px;
+}
+
+.modal-texto p{
+    padding-top: 15px;
+}
+
 /* FOOTER */
 
 footer{

@@ -85,14 +85,14 @@ function carregarNoticias() {
         funcoesDiv.classList.add("funcoes", "d-flex", "gap-1");
 
         const editaBtn = document.createElement("a");
-        editaBtn.href = "#editarNoticia.html";
+        editaBtn.href = "editar.html";
         editaBtn.classList.add("edita-btn");
-        editaBtn.innerHTML = '<img src="./assets/imagens/editar.svg" alt="Icone de edição representado por um lápis e um papel na cor vermelha">';
+        editaBtn.innerHTML = '<img src="../assets/imagens/editar.svg" alt="Icone de edição representado por um lápis e um papel na cor vermelha">';
         funcoesDiv.appendChild(editaBtn);
 
         const deletaBtn = document.createElement("a");
         deletaBtn.classList.add("deleta-btn");
-        deletaBtn.innerHTML = '<img src="./assets/imagens/lixeira.svg" alt="Icone de deletar representado por uma lixeira na cor vermelha">';
+        deletaBtn.innerHTML = '<img src="../assets/imagens/lixeira.svg" alt="Icone de deletar representado por uma lixeira na cor vermelha">';
         deletaBtn.addEventListener('click', () => deleteNoticia(noticia.titulo));
         funcoesDiv.appendChild(deletaBtn);
 
