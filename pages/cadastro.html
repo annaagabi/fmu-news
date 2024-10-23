@@ -16,7 +16,7 @@
     </header>
     <main class="mt-5 mb-5 d-flex flex-column justify-content-center align-items-center">
         <form class="card-login d-flex flex-column justify-content-center align-items-center border-3
-        borda-vermelha borda-raio borda-card" method="post" action="" onsubmit="event.preventDefault(); Enviar();"> <!-- o "onsubmit="event.preventDefault(); Enviar();"" não deixa redirecionar -->
+        borda-vermelha borda-raio borda-card" method="post" action="#">
             <h2 class="fs-1 texto-azul fw-bold mt-5 pb-4">CADASTRO</h2>
             <div class="card-login d-flex flex-column">
                 <label for="nome" class="form-label fw-bold pb-4 fonte-20">Nome</label>
@@ -28,7 +28,7 @@
                 <label for="conf-senha" class="form-label fw-bold pb-4 fonte-20">Confirme Sua Senha</label>
                 <input type="password" id="password" class="form-control border-2 borda-input mb-5 borda-raio" required>
             </div>
-            <button type="submit" onclick="Enviar()" class=" mb-4 botao-login borda-raio botao-estilo fw-bold text-uppercase">Cadastre</button>
+            <button type="submit" id="open-modal" class=" mb-4 botao-login borda-raio botao-estilo fw-bold text-uppercase">Cadastre</button>
         </form>
 
         <div id="modal" class="modal-container d-flex align-items-center justify-content-center position-fixed hide-modal">
