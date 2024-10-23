@@ -38,18 +38,42 @@
 }
 
 .img-gap{
-    gap: 70px
+    gap: 4.37rem;
 }
 
 .sobre p{
-    width: 550px;
-    height: 308px;
+    max-width: 34.37rem;
+    width: 100vw;
     text-align: justify;
-    /* text-indent:4em; */
+    text-indent: 3rem;
+}
+
+.texto-preto{
+    color: var(--fourth-color)
+}
+.texto-azul{
+    color: var(--second-color)
 }
 .sobre img{
-    width: 700px;
-    height: 502px;
+    max-width: 43.75rem;
+    width: 100vw;
+    height: 31.37rem;
+    
+}
+.sobre-2 img{
+    max-width: 38.75rem;
+    width: 100vw;
+    height: 31.87rem;
+}
+
+.sobre-2 p{
+    max-width: 39rem;
+    width: 100vw;
+    text-align: justify;
+    text-indent: 3rem;
+}
+.fonte-36{
+    font-size: 2.25rem;
 }
 
 footer{
