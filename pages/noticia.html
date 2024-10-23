@@ -23,24 +23,11 @@
     </main>
     <footer class="fundo-vermelho mt-5 d-flex justify-content-between align-items-center w-100">
         <p class="texto-branco fonte-16 ms-5">2024 FMU NEWS. All Rights Reserved.</p>
-        <a href="https://github.com/annaagabi/fmu-news" target="_blank" class="me-5"><img src="./assets/imagens/github.svg" alt="Logo do github"></a>
+        <a href="https://github.com/annaagabi/fmu-news" target="_blank" class="me-5"><img src="../assets/imagens/github.svg" alt="Logo do github"></a>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/funcao.js"></script>
-    <script src="../assets/js/noticia.js"></script>
-    <script>
-        function carregarNoticiaSelecionada() {
-            const noticia = JSON.parse(localStorage.getItem('noticiaSelecionada'));
-            if (noticia) {
-                document.querySelector('.noticia h1').innerText = noticia.titulo;
-                document.querySelector('.noticia p').innerText = noticia.descricao;
-            } else {
-                document.querySelector('.noticia h1').innerText = 'Notícia não encontrada';
-                document.querySelector('.noticia p').innerText = '';
-            }
-        }
-        window.onload = carregarNoticiaSelecionada;
-    </script>
+
 </body>
 </html>
