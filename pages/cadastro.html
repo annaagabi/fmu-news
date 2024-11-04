@@ -9,14 +9,14 @@
 </head>
 <body>
     <header class="borda-vermelha border-2 border-top-0 border-end-0 border-start-0 mb-5">
-        <div class="d-flex justify-content-between align-items-center m-5 mb-4">
-            <img src="../assets/imagens/logo.svg" alt="Logo do FMU News com o FMU na cor vermelha e o News na cor azul">
+        <div class="d-flex justify-content-between align-items-center m-5 mb-4 cabecalho">
+            <img src="../assets/imagens/logo.svg" alt="Logo do FMU News com o FMU na cor vermelha e o News na cor azul" class="header-img">
             <a href="./todas-noticias.html"><button class="botao-estilo botao-cadastro borda-raio fw-bold text-uppercase">VOLTAR</button></a>
         </div>
     </header>
     <main class="mt-5 mb-5 d-flex flex-column justify-content-center align-items-center">
         <form class="card-login d-flex flex-column justify-content-center align-items-center border-3
-        borda-vermelha borda-raio borda-card" method="post" action="#">
+        borda-vermelha borda-raio borda-card w-100" method="post" action="#">
             <h2 class="fs-1 texto-azul fw-bold mt-5 pb-4">CADASTRO</h2>
             <div class="card-login d-flex flex-column">
                 <label for="nome" class="form-label fw-bold pb-4 fonte-20">Nome</label>
@@ -28,7 +28,7 @@
                 <label for="conf-senha" class="form-label fw-bold pb-4 fonte-20">Confirme Sua Senha</label>
                 <input type="password" id="password" class="form-control border-2 borda-input mb-5 borda-raio" required>
             </div>
-            <button type="submit" id="open-modal" class=" mb-4 botao-login borda-raio botao-estilo fw-bold text-uppercase">Cadastre</button>
+            <button type="submit" id="open-modal" class="mb-4 botao-login borda-raio botao-estilo fw-bold text-uppercase">Cadastre</button>
         </form>
 
         <div id="modal" class="modal-container d-flex align-items-center justify-content-center position-fixed hide-modal">
@@ -38,7 +38,7 @@
             </div>
           </div>
     </main>
-    <footer class="fundo-vermelho mt-5 d-flex justify-content-between align-items-center w-100 position-relative bottom-0">
+    <footer class="fundo-vermelho mt-5 d-flex justify-content-between align-items-center w-100 ">
         <p class="texto-branco fonte-16 ms-5">2024 FMU NEWS. All Rights Reserved By Anna Gabriela, Charles, Gabriel & Gabriella</p>
         <a href="https://github.com/annaagabi/fmu-news" target="_blank" class="me-5"><img src="../assets/imagens/github.svg" alt="Logo do github na cor branca"></a>
     </footer>
