@@ -1,11 +1,16 @@
 @import 'global.css';
 
+body{
+    height: 100vh;
+    min-height: 100vh;
+}
+
 .fonte-20{
-    font-size: 20px;
+    font-size:  1.25rem;
 }
 
 .fonte-16{
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .texto-azul{
@@ -25,18 +30,23 @@
 }
 
 .borda-card{
-    width: 499px;
+    max-width: 499px;
+    width: 100%;
 }
 
 .borda-input{
-    width: 355px;
-    height: 69px;
+    max-width: 355px;
+    width: 90vw;
+    max-height: 69px;
+    height: 80vh;
     border: solid var(--second-color);
 }
 
 .botao-login{
-    width: 144px;
-    height: 56px;
+    max-width: 144px;
+    width: 100vw;
+    max-height: 56px;
+    height: 100vh;
 }
 
 .botao-cadastro{
@@ -46,7 +56,7 @@
 .botao-estilo{
     background-color: var(--main-color);
     color: var(--third-color);
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .fundo-vermelho{
@@ -54,5 +64,6 @@
 }
 
 footer{
-    height: 159px;
+    max-height: 9.93rem;
+    height: 100vh;
 }
