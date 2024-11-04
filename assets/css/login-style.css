@@ -1,9 +1,17 @@
 @import 'global.css';
 
-body{
+/* body, html{
     height: 100vh;
-    min-height: 100vh;
+ 
 }
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1 0 auto;
+} */
 
 .fonte-20{
     font-size:  1.25rem;
@@ -64,6 +72,7 @@ body{
 }
 
 footer{
+    flex-shrink: 0;
     max-height: 9.93rem;
     height: 100vh;
 }
