@@ -1,10 +1,5 @@
 @import 'global.css';
 
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
 /* HEADER */
 .fonte-24{
     font-size: 1.5rem;
@@ -31,6 +26,15 @@ html, body {
     width: 12.5rem;
     height: 3.5rem;
 }
+.cabecalho{
+    gap: 2rem
+}
+.cabecalho img{
+    max-width: 209px;
+    width: 100vw;
+    max-height: 45px;
+    height: 100vh;
+}
 
 /* MAIN */
 
@@ -50,7 +54,7 @@ html, body {
 }
 
 .gap-botoes{
-    gap: 60%;
+    gap: 70%;
 }
 /* .botao-post{
     position: absolute;
@@ -107,7 +111,9 @@ html, body {
 /* FOOTER */
 
 footer{
-    height: 9.93rem;
+    flex-shrink: 0;
+    max-height: 9.93rem;
+    height: 100vh;
 }
 
 .fundo-vermelho{
@@ -120,4 +126,32 @@ footer{
 
 .fonte-16{
     font-size: 1rem;
+}
+
+
+
+@media(max-width:1000px){
+    .botoes-todas{
+        max-width: 600px;
+    }
+}
+@media(max-width:700px){
+    .botoes-todas{
+        max-width: 200px;
+    }
+    .card-noticia{
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 500px){
+    .cabecalho{
+        flex-direction: column;
+        gap:2rem;
+    }
+    .botoes-todas{
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
 }
