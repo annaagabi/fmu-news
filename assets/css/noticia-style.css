@@ -9,16 +9,28 @@
 .botao-estilo{
     background-color: var(--main-color);
     color: var(--third-color);
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .botao-cadastro{
-    width: 178px;
-    height: 56px;
+    max-width: 178px;
+    width: 100vw;
+    max-height: 56px;
+    height: 100vh;
 }
 
 .borda-raio{
     border-radius: 10px;
+}
+
+.cabecalho{
+    gap: 2rem
+}
+.cabecalho img{
+    max-width: 209px;
+    width: 100vw;
+    max-height: 45px;
+    height: 100vh;
 }
 
 
@@ -44,7 +56,9 @@
 /* FOOTER */
 
 footer{
-    height: 159px;
+    flex-shrink: 0;
+    max-height: 9.93rem;
+    height: 100vh;
 }
 
 .fundo-vermelho{
@@ -56,5 +70,12 @@ footer{
 }
 
 .fonte-16{
-    font-size: 16px;
+    font-size: 1rem;
+}
+
+@media(max-width: 500px){
+    .cabecalho{
+        flex-direction: column;
+        gap:2rem;
+    }
 }
