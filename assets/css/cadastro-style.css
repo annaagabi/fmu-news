@@ -96,6 +96,22 @@
     padding-top: 15px;
 }
 
+.span-erro{
+    color: var(--main-color);
+    font-size: 1rem;
+}
+
+.span-exibir{
+    opacity: 1;
+}
+
+.span-erro-longo {
+    max-width: 400px; 
+    width: 100vw;
+    word-wrap: break-word; 
+    white-space: normal; 
+}
+
 .fundo-vermelho{
     background-color: var(--main-color);
 }

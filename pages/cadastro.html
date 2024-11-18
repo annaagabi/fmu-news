@@ -19,16 +19,23 @@
         borda-vermelha borda-raio borda-card w-100" method="post" action="#">
             <h2 class="fs-1 texto-azul fw-bold mt-5 pb-4">CADASTRO</h2>
             <div class="card-login d-flex flex-column">
-                <label for="nome" class="form-label fw-bold pb-4 fonte-20">Nome</label>
+                <label for="nome" class="form-label fw-bold fonte-20">Nome</label>
+                <span id="span-nome" class="span-erro hide-modal">Preencha o campo!</span>
                 <input type="nome" id="nome" class="form-control border-2 borda-input mb-5 borda-raio" required>
-                <label for="email" class="form-label fw-bold pb-4 fonte-20">Email</label>
+
+                <label for="email" class="form-label fw-bold fonte-20">Email</label>
+                <span id="span-email" class="span-erro hide-modal">Preencha o campo!</span>
                 <input type="email" id="email" class="form-control border-2 borda-input mb-5 borda-raio" required>
-                <label for="senha" class="form-label fw-bold pb-4 fonte-20">Senha</label>
-                <input type="password" id="password" class="form-control border-2 borda-input mb-5 borda-raio" required>
-                <label for="conf-senha" class="form-label fw-bold pb-4 fonte-20">Confirme Sua Senha</label>
-                <input type="password" id="password" class="form-control border-2 borda-input mb-5 borda-raio" required>
+
+                <label for="senha" class="form-label fw-bold fonte-20">Senha</label>
+                <span id="span-senha" class="span-erro hide-modal">Preencha o campo!</span>
+                <input type="password" id="senha" class="form-control border-2 borda-input mb-5 borda-raio" required>
+
+                <label for="conf-senha" class="form-label fw-bold fonte-20">Confirme Sua Senha</label>
+                <span id="span-conf-senha" class="span-erro hide-modal">Preencha o campo!</span>
+                <input type="password" id="conf-senha" class="form-control border-2 borda-input mb-5 borda-raio" required>
             </div>
-            <button type="submit" id="open-modal" class="mb-4 botao-login borda-raio botao-estilo fw-bold text-uppercase">Cadastre</button>
+            <button id="cadastro" class="mb-4 botao-login borda-raio botao-estilo fw-bold text-uppercase">Cadastre</button>
         </form>
 
         <div id="modal" class="modal-container d-flex align-items-center justify-content-center position-fixed hide-modal">
