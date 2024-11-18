@@ -64,6 +64,36 @@ if (noticiaModalButton) {
     });
 }
 
+const loginButton = document.querySelector("#login");
+if (loginButton) {
+    loginButton.addEventListener("click", () => {
+        const email = document.querySelector("#email").value.trim();
+        const senha = document.querySelector("#senha").value.trim();
+
+        const spanEmail = document.querySelector("#span-email");
+        const spanSenha = document.querySelector("#span-senha");
+
+        spanEmail.classList.add("hide-modal");
+        spanSenha.classList.add("hide-modal");
+
+        // Verifica se os campos estão preenchidos
+        if (email !== "" && senha !== "") {
+            setTimeout(() => {
+                window.location.href = "/pages/todas-noticias.html"
+                toggleModal();
+            }, 3000);
+        } else {
+            // Exibe spans de erro se os campos estiverem vazios
+            if (email === "") {
+                spanEmail.classList.remove("hide-modal");
+            }
+            if (senha === "") {
+                spanSenha.classList.remove("hide-modal");
+            }
+        }
+    });
+}
+
 // Redimensionar Textarea
 const textarea = document.getElementById('noticia-descricao')
 
