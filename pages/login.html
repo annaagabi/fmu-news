@@ -18,13 +18,16 @@
         borda-vermelha borda-raio borda-card" method="post" action="#" > 
             <h2 class="fs-1 texto-azul fw-bold mt-5 pb-4">LOGIN</h2>
             <div class="card-login d-flex flex-column">
-                <div class="div">
-                    <label for="email" class="form-label fw-bold pb-4 fonte-20">Email</label>
+                <div class="div d-flex flex-column">
+                    <label for="email" class="form-label fw-bold fonte-20">Email</label>
+                    <span id="span-email" class="span-erro hide-modal">Preencha o campo!</span>
                     <input type="email" id="email" class="form-control border-2 borda-input mb-5 borda-raio w-100" required>
+    
                 </div>
-                <div class="div">
-                    <label for="senha" class="form-label fw-bold pb-4 fonte-20">Senha</label>
-                    <input type="password" id="password" class="form-control border-2 borda-input mb-5 borda-raio " required>
+                <div class="div d-flex flex-column">
+                    <label for="senha" class="form-label fw-bold fonte-20">Senha</label>
+                    <span id="span-senha" class="span-erro hide-modal">Preencha o campo!</span>
+                    <input type="password" id="senha" class="form-control border-2 borda-input mb-5 borda-raio " required>
                 </div>
             </div>
             <a href="./todas-noticias.html"><button type="button" class="mb-4 botao-login borda-raio botao-estilo fw-bold">ENTRE</button></a>

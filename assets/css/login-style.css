@@ -50,6 +50,19 @@ main{
     border: solid var(--second-color);
 }
 
+.span-erro{
+    color: var(--main-color);
+    font-size: 1rem;
+}
+
+.span-exibir{
+    opacity: 1;
+}
+.hide-modal{
+    opacity: 0; 
+    pointer-events: none; 
+}
+
 .botao-login{
     max-width: 144px;
     width: 100vw;
