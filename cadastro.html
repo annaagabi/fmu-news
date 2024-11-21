@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/cadastro-style.css">
+    <link rel="stylesheet" href="./assets/css/cadastro-style.css">
 </head>
 <body>
     <header class="borda-vermelha border-2 border-top-0 border-end-0 border-start-0 mb-5">
         <div class="d-flex justify-content-between align-items-center m-5 mb-4 cabecalho">
-            <img src="../assets/imagens/logo.svg" alt="Logo do FMU News com o FMU na cor vermelha e o News na cor azul" class="header-img">
+            <img src="./assets/imagens/logo.svg" alt="Logo do FMU News com o FMU na cor vermelha e o News na cor azul" class="header-img">
             <a href="./todas-noticias.html"><button class="botao-estilo botao-cadastro borda-raio fw-bold text-uppercase">VOLTAR</button></a>
         </div>
     </header>
@@ -21,26 +21,26 @@
             <div class="card-login d-flex flex-column">
                 <label for="nome" class="form-label fw-bold fonte-20">Nome</label>
                 <span id="span-nome" class="span-erro hide-modal">Preencha o campo!</span>
-                <input type="nome" id="nome" class="form-control border-2 borda-input mb-5 borda-raio" required>
+                <input type="nome" id="nome" class="form-control border-2 borda-input mb-5 borda-raio" name="nome" maxlength="100" required>
 
                 <label for="email" class="form-label fw-bold fonte-20">Email</label>
                 <span id="span-email" class="span-erro hide-modal">Preencha o campo!</span>
-                <input type="email" id="email" class="form-control border-2 borda-input mb-5 borda-raio" required>
+                <input type="email" id="email" class="form-control border-2 borda-input mb-5 borda-raio" name="email" maxlength="200" required>
 
                 <label for="senha" class="form-label fw-bold fonte-20">Senha</label>
                 <span id="span-senha" class="span-erro hide-modal">Preencha o campo!</span>
-                <input type="password" id="senha" class="form-control border-2 borda-input mb-5 borda-raio" required>
+                <input type="password" id="senha" class="form-control border-2 borda-input mb-5 borda-raio" name="senha" maxlength="100" required>
 
                 <label for="conf-senha" class="form-label fw-bold fonte-20">Confirme Sua Senha</label>
                 <span id="span-conf-senha" class="span-erro hide-modal">Preencha o campo!</span>
-                <input type="password" id="conf-senha" class="form-control border-2 borda-input mb-5 borda-raio" required>
+                <input type="password" id="conf-senha" class="form-control border-2 borda-input mb-5 borda-raio" name="conf-senha" maxlength="100" required>
             </div>
             <button id="cadastro" class="mb-4 botao-login borda-raio botao-estilo fw-bold text-uppercase">Cadastre</button>
         </form>
 
         <div id="modal" class="modal-container d-flex align-items-center justify-content-center position-fixed hide-modal">
             <div class="modal-texto d-flex align-items-center justify-content-center fonte-20 texto-preto">
-              <img src="../assets/imagens/modal-check.svg" alt="">
+              <img src="./assets/imagens/modal-check.svg" alt="">
               <p>Usuário cadastrado com sucesso!</p>
             </div>
           </div>
@@ -53,6 +53,6 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <script src="../assets/js/funcao.js"></script>
+    <script src="./assets/js/funcao.js"></script>
 </body>
 </html>
