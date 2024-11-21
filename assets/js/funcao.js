@@ -77,13 +77,7 @@ if (loginButton) {
         spanSenha.classList.add("hide-modal");
 
         // Verifica se os campos estão preenchidos
-        if (email !== "" && senha !== "") {
-            setTimeout(() => {
-                window.location.href = "/pages/todas-noticias.html"
-                toggleModal();
-            }, 3000);
-        } else {
-            // Exibe spans de erro se os campos estiverem vazios
+        if (email === "" || senha === "") {
             if (email === "") {
                 spanEmail.classList.remove("hide-modal");
             }
