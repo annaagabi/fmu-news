@@ -41,6 +41,8 @@
       <?php 
         while ( $result = $select->fetch()) {
             $titulo = $result['titulo'];
+            $id_post= $result['id_post'];
+            $descricao= $result['postagem'];
 
             echo 
                 "<div class='card-noticia d-flex align-items-center justify-content-center gap-3 mt-5'>
@@ -48,7 +50,7 @@
                         <h4 class='texto-branco fw-bold fonte-24'>".$titulo."</h4>
                     </div>
                     <div class='funcoes d-flex gap-1'>
-                        <a href='editar.html' class='edita-btn'><img src='./assets/imagens/editar.svg' alt='Icone de edição representado por um lápis e um papel na cor vermelha'></a>
+                        <a href='editar.php?id_post=$id_post' class='edita-btn'><img src='./assets/imagens/editar.svg' alt='Icone de edição representado por um lápis e um papel na cor vermelha'></a>
                         <img id='delete-modal' src='./assets/imagens/lixeira.svg' alt='Icone de deletar representado por uma lixeira na cor vermelha'>
                     </div>
                 </div>";
