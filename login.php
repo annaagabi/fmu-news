@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST')
                 // Salvando o nome do usuário para aparecer nas tarefas
                 $_SESSION['nome'] = $result['nome'];
 
-                header('location: todas-noticias.html');
+                header('location: todas-noticias.php');
                 exit();
             } else {
                 header('location: login.html');
