@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2024 at 04:13 PM
+-- Generation Time: Nov 25, 2024 at 11:31 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -24,27 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cliente`
---
-
-CREATE TABLE `cliente` (
-  `id` int(11) NOT NULL,
-  `nome` varchar(100) NOT NULL,
-  `email` varchar(200) NOT NULL,
-  `senha` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `cliente`
---
-
-INSERT INTO `cliente` (`id`, `nome`, `email`, `senha`) VALUES
-(1, 'teste', 'teste@gmail.com', 'teste'),
-(2, 'teste', 'teste@gmail.com', 'teste');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `post`
 --
 
@@ -56,14 +35,39 @@ CREATE TABLE `post` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Indexes for dumped tables
+-- Dumping data for table `post`
 --
 
+INSERT INTO `post` (`id_post`, `postagem`, `id_cliente`, `titulo`) VALUES
+(1, 'Deu certo', 3, 'aaaaa'),
+(2, 'Texto', 3, 'Funcionou'),
+(3, 'Funcionaaaa', 3, 'Teste');
+
+-- --------------------------------------------------------
+
 --
--- Indexes for table `cliente`
+-- Table structure for table `usuario`
 --
-ALTER TABLE `cliente`
-  ADD PRIMARY KEY (`id`);
+
+CREATE TABLE `usuario` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `senha` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`) VALUES
+(1, 'teste', 'teste@gmail.com', 'teste'),
+(2, 'teste', 'teste@gmail.com', 'teste'),
+(3, 'Anna', 'anna@gmail.com', '$2y$10$zY.TNZibBhXp5SfKL5bwsuW/NKQkfx92JAdSkXwHtY3b/noOO4hM.');
+
+--
+-- Indexes for dumped tables
+--
 
 --
 -- Indexes for table `post`
@@ -73,20 +77,26 @@ ALTER TABLE `post`
   ADD KEY `fk_cliente` (`id_cliente`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Indexes for table `usuario`
 --
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for table `cliente`
+-- AUTO_INCREMENT for dumped tables
 --
-ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
@@ -96,7 +106,7 @@ ALTER TABLE `post`
 -- Constraints for table `post`
 --
 ALTER TABLE `post`
-  ADD CONSTRAINT `fk_cliente` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`);
+  ADD CONSTRAINT `fk_cliente` FOREIGN KEY (`id_cliente`) REFERENCES `usuario` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
