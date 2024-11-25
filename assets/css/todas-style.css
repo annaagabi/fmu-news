@@ -56,6 +56,11 @@
 .gap-botoes{
     gap: 70%;
 }
+
+.hide-modal{
+    opacity: 0; 
+    pointer-events: none; 
+}
 /* .botao-post{
     position: absolute;
     left: 18%;
