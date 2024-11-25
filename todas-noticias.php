@@ -46,9 +46,9 @@
 
             echo 
                 "<div class='card-noticia d-flex align-items-center justify-content-center gap-3 mt-5'>
-                    <div class='titulo d-flex align-items-center justify-content-center rounded-4 fundo-azul h4-largura'>
+                    <a href='noticia.php?id_post=$id_post' class='edita-btn' style='text-decoration: none;'><div class='titulo d-flex align-items-center justify-content-center rounded-4 fundo-azul h4-largura'>
                         <h4 class='texto-branco fw-bold fonte-24'>".$titulo."</h4>
-                    </div>
+                    </div></a>
                     <div class='funcoes d-flex gap-1'>
                         <a href='editar.php?id_post=$id_post' class='edita-btn'><img src='./assets/imagens/editar.svg' alt='Icone de edição representado por um lápis e um papel na cor vermelha'></a>
                         <img id='delete-modal' src='./assets/imagens/lixeira.svg' alt='Icone de deletar representado por uma lixeira na cor vermelha'>
