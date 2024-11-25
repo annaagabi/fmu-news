@@ -5,7 +5,6 @@
     try {
         $select = $con->prepare("SELECT * FROM post");
         $select->execute();
-    }
 ?>
 
 
@@ -39,15 +38,29 @@
         </div> -->
       <!-- <div id="cards-noticia"> -->
       <div id="cards-noticia" class="cards-noticia d-flex align-items-center justify-content-center flex-column mt-3 position-relative">
-        <div class="card-noticia d-flex align-items-center justify-content-center gap-3 mt-5">
-            <div class="titulo d-flex align-items-center justify-content-center rounded-4 fundo-azul h4-largura">
-                <h4 class="texto-branco fw-bold fonte-24">Titulo</h4>
-            </div>
-            <div class="funcoes d-flex gap-1">
-                <a href="editar.html" class="edita-btn"><img src="./assets/imagens/editar.svg" alt="Icone de edição representado por um lápis e um papel na cor vermelha"></a>
-                <img id="delete-modal" src="./assets/imagens/lixeira.svg" alt="Icone de deletar representado por uma lixeira na cor vermelha">
-            </div>
-        </div>
+      <?php 
+        while ( $result = $select->fetch()) {
+            $titulo = $result['titulo'];
+
+            echo 
+                "<div class='card-noticia d-flex align-items-center justify-content-center gap-3 mt-5'>
+                    <div class='titulo d-flex align-items-center justify-content-center rounded-4 fundo-azul h4-largura'>
+                        <h4 class='texto-branco fw-bold fonte-24'>".$titulo."</h4>
+                    </div>
+                    <div class='funcoes d-flex gap-1'>
+                        <a href='editar.html' class='edita-btn'><img src='./assets/imagens/editar.svg' alt='Icone de edição representado por um lápis e um papel na cor vermelha'></a>
+                        <img id='delete-modal' src='./assets/imagens/lixeira.svg' alt='Icone de deletar representado por uma lixeira na cor vermelha'>
+                    </div>
+                </div>";
+            } 
+
+
+        } catch (PDOException $e) {
+            echo "Erro: " . $e->getMessage();
+        }
+
+    ?>
+
        </div>
 
        <div id="modal" class="modal-container d-flex align-items-center justify-content-center position-fixed hide-modal">
