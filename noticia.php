@@ -25,7 +25,7 @@
 <body>
     <header class="borda-vermelha border-2 border-top-0 border-end-0 border-start-0 mb-5">
         <div class="d-flex justify-content-between align-items-center m-5 mb-4 cabecalho">
-            <img src="./assets/imagens/logo.svg" alt="Logo do FMU News">
+            <a href="index.php"><img src="./assets/imagens/logo.svg" alt="Logo do FMU News"></a>
             <a href="./login.html"><button class="botao-estilo botao-cadastro borda-raio fw-bold text-uppercase">Login</button></a>
         </div>
     </header>
