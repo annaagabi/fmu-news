@@ -50,7 +50,7 @@
                     </div></a>
                     <div class='funcoes d-flex gap-1'>
                         <a href='editar.php?id_post=$id_post' class='edita-btn'><img src='./assets/imagens/editar.svg' alt='Icone de edição representado por um lápis e um papel na cor vermelha'></a>
-                        <img id='delete-modal' src='./assets/imagens/lixeira.svg' alt='Icone de deletar representado por uma lixeira na cor vermelha'>
+                        <a href='exclui-noticia.php?id_post=$id_post' class='edita-btn'><img id='delete-modal' src='./assets/imagens/lixeira.svg' alt='Icone de deletar representado por uma lixeira na cor vermelha'></a>
                     </div>
                 </div>";
             } 
