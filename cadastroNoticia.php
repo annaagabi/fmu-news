@@ -20,7 +20,7 @@ if($_SERVER ['REQUEST_METHOD'] == 'POST'){
         header('location: todas-noticias.php');
 
     }else{
-        header('location: nova-noticia.html');
+        header('location: nova-noticia.php');
         // echo 'Erro ao cadastrar usuario';
     }
 }
