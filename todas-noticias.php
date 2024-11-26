@@ -1,6 +1,5 @@
 <?php
     include_once "conexao.php";
-    date_default_timezone_set('America/Sao_Paulo');
 
     try {
         $select = $con->prepare("SELECT * FROM post");
