@@ -20,7 +20,7 @@
 
   <main>
     <form action="cadastroNoticia.php" method="post" class="d-flex align-items-center justify-content-center flex-column gap-main" id="nova-noticia">
-      <div class="">
+      <div class="hide-modal">
         <input type="text" name="id_cliente" id="usuario" class="form-control"
                        value= <?php session_start(); echo $_SESSION['id'];?> readonly> <!-- Mostra o id do usuario -->
     </div>
