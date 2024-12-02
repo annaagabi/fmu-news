@@ -36,9 +36,9 @@
         </div>
         
     </main>
-    <footer class="fundo-vermelho mt-5 d-flex justify-content-between align-items-center w-100">
-        <p class="texto-branco fonte-16 ms-5">2024 FMU NEWS. All Rights Reserved.</p>
-        <a href="https://github.com/annaagabi/fmu-news" target="_blank" class="me-5"><img src="./assets/imagens/github.svg" alt="Logo do github"></a>
+    <footer class="fundo-vermelho mt-5 d-flex justify-content-between align-items-center w-100 position-relative bottom-0">
+        <p class="texto-branco fonte-16 ms-5">2024 FMU NEWS. All Rights Reserved By Anna Gabriela, Charles, Gabriel & Gabriella</p>
+        <a href="https://github.com/annaagabi/fmu-news" target="_blank" class="me-5"><img src="./assets/imagens/github.svg" alt="Logo do github na cor branca"></a>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
