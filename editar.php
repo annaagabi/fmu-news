@@ -8,8 +8,8 @@
     $select -> execute([$id]);
     $resultado = $select -> fetch();
 
-    // session_start();
-    // $_SESSION['id'] = $id;
+    session_start();
+    $_SESSION['id'] = $id;
 
 ?>
 
@@ -36,8 +36,8 @@
   <main>
     <form action="editaNoticia.php" method="post" class="d-flex align-items-center justify-content-center flex-column gap-main" id="nova-noticia">
     <div class="">
-        <input type="text" name="id_cliente" id="usuario" class="form-control"
-                       value= <?php session_start(); echo $_SESSION['id'];?> readonly> <!-- Mostra o id do usuario -->
+        <input type="text" name="id_post" id="post" class="form-control"
+                       value= <?php echo 'Idpost'.$_SESSION['id_post'];?> readonly> <!-- Mostra o id do usuario -->
     </div>
       <div class="inserir-noticia d-flex align-items-center flex-column fundo-azul rounded-4 justify-content-center">
         <div class="titulo-noticia mt-5 m-0 d-flex flex-column">
