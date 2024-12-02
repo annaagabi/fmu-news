@@ -21,6 +21,7 @@ if($_SERVER ['REQUEST_METHOD'] == 'POST'){
     // Executar o insert
     if($insert->execute()){
         header('location: login.html');
+        exit;
 
     }else{
         header('location: cadastro.html');
