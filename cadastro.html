@@ -16,7 +16,7 @@
     </header>
     <main class="mt-5 mb-5 d-flex flex-column justify-content-center align-items-center">
         <form class="card-login d-flex flex-column justify-content-center align-items-center border-3
-        borda-vermelha borda-raio borda-card w-100" method="post" action="#">
+        borda-vermelha borda-raio borda-card w-100" method="post" action="cadastro-usuario.php">
             <h2 class="fs-1 texto-azul fw-bold mt-5 pb-4">CADASTRO</h2>
             <div class="card-login d-flex flex-column">
                 <label for="nome" class="form-label fw-bold fonte-20">Nome</label>
@@ -35,15 +35,16 @@
                 <span id="span-conf-senha" class="span-erro hide-modal">Preencha o campo!</span>
                 <input type="password" id="conf-senha" class="form-control border-2 borda-input mb-5 borda-raio" name="conf-senha" maxlength="100" required>
             </div>
-            <button id="cadastro" class="mb-4 botao-login borda-raio botao-estilo fw-bold text-uppercase">Cadastre</button>
+            <button id="cadastro" class="mb-4 botao-login borda-raio botao-estilo fw-bold text-uppercase" type="submit">Cadastre</button>
+            <div id="modal" class="modal-container d-flex align-items-center justify-content-center position-fixed hide-modal">
+                <div class="modal-texto d-flex align-items-center justify-content-center fonte-20 texto-preto">
+                  <img src="./assets/imagens/modal-check.svg" alt="">
+                  <p>Usuário cadastrado com sucesso!</p>
+                </div>
+              </div>
         </form>
 
-        <div id="modal" class="modal-container d-flex align-items-center justify-content-center position-fixed hide-modal">
-            <div class="modal-texto d-flex align-items-center justify-content-center fonte-20 texto-preto">
-              <img src="./assets/imagens/modal-check.svg" alt="">
-              <p>Usuário cadastrado com sucesso!</p>
-            </div>
-          </div>
+        
     </main>
     <footer class="fundo-vermelho mt-5 d-flex justify-content-between align-items-center w-100 ">
         <p class="texto-branco fonte-16 ms-5">2024 FMU NEWS. All Rights Reserved By Anna Gabriela, Charles, Gabriel & Gabriella</p>
