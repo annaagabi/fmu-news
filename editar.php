@@ -35,10 +35,10 @@
 
   <main>
     <form action="editaNoticia.php" method="post" class="d-flex align-items-center justify-content-center flex-column gap-main" id="nova-noticia">
-    <div class="">
+    <!-- <div class="">
         <input type="text" name="id_post" id="post" class="form-control"
-                       value= <?php echo 'Idpost'.$_SESSION['id_post'];?> readonly> <!-- Mostra o id do usuario -->
-    </div>
+                       value= <?php echo 'Idpost'.$_SESSION['id_post'];?> readonly> 
+    </div> -->
       <div class="inserir-noticia d-flex align-items-center flex-column fundo-azul rounded-4 justify-content-center">
         <div class="titulo-noticia mt-5 m-0 d-flex flex-column">
           <span id="span-texto" class="span-erro hide-modal">Preencha o campo!</span>
