@@ -7,9 +7,9 @@
 
     $select -> execute([$id]);
     $resultado = $select -> fetch();
-
-    // session_start();
-    // $_SESSION['id'] = $id;
+   $postagem_formatada = preg_replace('/\r\n\r\n/', '</p><p class="fonte-24 paragrafo pt-3">', $resultado['postagem']);
+    
+   $postagem_formatada = '<p class="fonte-24 paragrafo pt-3">' . $postagem_formatada . '</p>';
 
 ?>
 
@@ -32,7 +32,7 @@
     <main class="mt-5 ">
         <div class="noticia mb-5 d-flex flex-column justify-content-center align-items-center">
             <h1 class="texto-azul fonte-36 text-uppercase mb-2 fw-bold"><?= htmlspecialchars($resultado['titulo']); ?></h1>
-            <p class="fonte-24 paragrafo pt-3"><?= htmlspecialchars($resultado['postagem']); ?></p>
+            <?= $postagem_formatada; ?>
         </div>
         
     </main>
