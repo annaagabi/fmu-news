@@ -45,7 +45,9 @@
 .h4-largura{
     max-width: 1074px;
     width: 80vw;
-    height: 5.57rem;
+    max-height: 6rem;
+    height: 100vh;
+    padding-left: 20px;
 }
 
 .largura{
