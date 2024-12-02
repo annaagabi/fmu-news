@@ -13,7 +13,6 @@ if (openModalButton) {
         // Fecha a modal após 3 segundos
         setTimeout(() => {
           toggleModal()
-          window.location.href = "../../pages/todas-noticias.html"
         }, 3000)
     });
 }
@@ -49,7 +48,6 @@ if (noticiaModalButton) {
             toggleModal();
 
             setTimeout(() => {
-                window.location.href = "../../pages/todas-noticias.html"
                 toggleModal();
             }, 3000);
         } else {
@@ -92,7 +90,7 @@ if (loginButton) {
 const cadastroButton = document.querySelector("#cadastro");
 if (cadastroButton) {
     cadastroButton.addEventListener("click", (event) => {
-        event.preventDefault(); 
+        // event.preventDefault(); 
 
         const nome = document.querySelector("#nome").value.trim();
         const email = document.querySelector("#email").value.trim();
@@ -144,13 +142,13 @@ if (cadastroButton) {
             isValid = false;
         }
 
-        // Se todos os campos forem válidos, exibe o modal e redireciona
+        // Se todos os campos forem válidos, exibe o modal
         if (isValid) {
-            toggleModal();
-            setTimeout(() => {
-                toggleModal();
-                window.location.href = "./todas-noticias.html";
-            }, 3000);
+            // toggleModal();
+            // setTimeout(() => {
+            //     toggleModal();
+            // }, 3000);
+            document.querySelector("form").submit();
         }
     });
 }
