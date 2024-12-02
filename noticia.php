@@ -31,7 +31,7 @@
     </header>
     <main class="mt-5 ">
         <div class="noticia mb-5 d-flex flex-column justify-content-center align-items-center">
-            <h1 class="texto-azul fonte-36 text-uppercase mb-2 fw-bold"><?= htmlspecialchars($resultado['titulo']); ?></h1>
+            <h1 class="texto-azul fonte-36 text-uppercase mb-2 fw-bold mx-5 text-center"><?= htmlspecialchars($resultado['titulo']); ?></h1>
             <?= $postagem_formatada; ?>
         </div>
         
