@@ -28,10 +28,10 @@
             <a href="./nova-noticia.php"><button class="botao-estilo botao-cadastro borda-raio fw-bold fonte-24 botao-post">NOVO POST</button></a>
             <a href="./cadastro.html"><button class="botao-estilo botao-usuario borda-raio fw-bold fonte-24 botao-usuario mr-5">NOVO USUARIO</button></a>
         </div>
-        <div class="hide-modal">
+        <!-- <div class="hide-modal">
             <input type="text" name="usuario" id="usuario" class="form-control"
-                           value= <?php session_start(); echo $_SESSION['id'];?> readonly> <!-- Mostra o id do usuario -->
-        </div>
+                           value= <?php session_start(); echo $_SESSION['id'];?> readonly> 
+        </div> -->
         <!-- <div id="cards-noticia" class="cards-noticia d-flex align-items-center justify-content-center flex-column mt-5">
             <div class="card-noticia"></div>
         </div> -->
