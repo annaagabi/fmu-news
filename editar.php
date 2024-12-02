@@ -51,7 +51,7 @@
       </div>
 
       <div class="botoes d-flex align-items-center justify-content-center">
-        <a href="./todas-noticias.html"><button class="botao-estilo botao-cadastro borda-raio fw-bold">VOLTAR</button></a>
+        <a href="./todas-noticias.php"><button class="botao-estilo botao-cadastro borda-raio fw-bold">VOLTAR</button></a>
         <button type="submit" id="noticia-modal" class="botao-estilo botao-cadastro borda-raio fw-bold">POSTAR</button>
       </div>
       <div id="modal" class="modal-container d-flex align-items-center justify-content-center position-fixed hide-modal">
