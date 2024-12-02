@@ -11,6 +11,9 @@
 .texto-azul{
     color: var(--second-color)
 }
+.texto-azul{
+    color: var(--second-color)
+}
 
 .texto-branco{
     color: var(--third-color);
@@ -70,8 +73,31 @@ body{
     width: 100vw;
     margin-top: 0;
 }
+
+.swiper-container {
+    position: relative;
+    margin-top: 20px; 
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: -100px; 
+    text-align: center;
+    width: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 300px; /
+}
 .quem-somos{
-    gap: 5.87rem;
+    gap: 2rem;
 }
 
 .botao-branco{
@@ -117,11 +143,27 @@ footer{
         align-items: center;
         justify-content: center;
     }
+    .swiper-pagination {
+        position: absolute;
+        bottom: -40px;
+        text-align: center;
+        width: 100%;
+    }
 }
 
 @media(max-width: 500px){
     .cabecalho{
         flex-direction: column;
         gap:2rem;
+    }
+
+    .swiper-pagination {
+        position: absolute;
+        bottom: -40px; 
+        text-align: center;
+        width: 100%;
+    }
+    .card-clicar{
+        width: 100px;
     }
 }
