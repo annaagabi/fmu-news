@@ -2,7 +2,7 @@
     include_once "conexao.php";
 
     try {
-        $select = $con->prepare("SELECT * FROM post");
+        $select = $con->prepare("SELECT * FROM post ORDER BY id_post DESC;");
         $select->execute();
 ?>
 
