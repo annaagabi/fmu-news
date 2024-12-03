@@ -26,7 +26,7 @@
     <main class="container d-flex justify-content-center align-items-center flex-column teste">
         <div class="d-flex largura justify-content-center gap-botoes botoes-todas">
             <a href="./nova-noticia.php"><button class="botao-estilo botao-cadastro borda-raio fw-bold fonte-24 botao-post">NOVO POST</button></a>
-            <a href="./cadastro.html"><button class="botao-estilo botao-usuario borda-raio fw-bold fonte-24 botao-usuario mr-5">NOVO USUARIO</button></a>
+            <a href="./cadastro.html"><button class="botao-estilo botao-usuario borda-raio fw-bold fonte-24 botao-usuario mr-5">NOVO USUÁRIO</button></a>
         </div>
         <!-- <div class="hide-modal">
             <input type="text" name="usuario" id="usuario" class="form-control"
